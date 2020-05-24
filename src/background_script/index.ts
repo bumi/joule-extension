@@ -3,6 +3,7 @@ import handlePrompts from './handlePrompts';
 import handlePassword from './handlePassword';
 import handleContextMenu from './handleContextMenu';
 import handleNotifications from './handleNotifications';
+import handlePaymentRequired from './handlePaymentRequired';
 
 function initBackground() {
   handleLndHttp();
@@ -10,6 +11,7 @@ function initBackground() {
   handlePassword();
   handleContextMenu();
   handleNotifications();
+  handlePaymentRequired();
 }
 
 initBackground();

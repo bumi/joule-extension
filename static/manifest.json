@@ -32,7 +32,14 @@
     "persistent": true
   },
   "web_accessible_resources": ["inpage_script.js"],
-  "permissions": ["storage", "activeTab", "contextMenus"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
   "optional_permissions": ["notifications", "http://*/", "https://*/"],
   "applications": {
     "gecko": {
