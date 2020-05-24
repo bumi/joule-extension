@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Timeline, Icon } from 'antd';
+import { Timeline } from 'antd';
+import { QuestionOutlined } from '@ant-design/icons';
+import Icon from '@ant-design/icons';
 import QRCode from 'qrcode.react';
 import Identicon from 'components/Identicon';
 import Unit from 'components/Unit';
@@ -113,7 +115,7 @@ class TransactionInfo extends React.Component<Props> {
         name: 'Unknown',
         icon: (
           <div className="Identicon">
-            <Icon type="question" />
+            <QuestionOutlined />
           </div>
         ),
       };

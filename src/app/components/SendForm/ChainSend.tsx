@@ -2,7 +2,8 @@ import React from 'react';
 import BN from 'bn.js';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Form, Input, Button, Icon, Tooltip } from 'antd';
+import { Form, Input, Button, Tooltip } from 'antd';
+import { ExclamationCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { AppState } from 'store/reducers';
 import AmountField from 'components/AmountField';
 import Unit from 'components/Unit';
@@ -92,7 +93,7 @@ class ChainSend extends React.Component<Props, State> {
       (!!blockchainBalance && !!amount && new BN(blockchainBalance).lt(new BN(amount)));
     const dustWarning = isPossibleDust(amount, address, fee) ? (
       <>
-        <Icon type="exclamation-circle" /> Dust warning: This amount may not be spendable
+        <ExclamationCircleOutlined /> Dust warning: This amount may not be spendable
       </>
     ) : (
       undefined
@@ -114,7 +115,7 @@ class ChainSend extends React.Component<Props, State> {
               Available on-chain balance: <Unit value={blockchainBalance} />
               <Tooltip title="How is this calculated?">
                 <Link to="/balances">
-                  <Icon type="info-circle" />
+                  <InfoCircleOutlined />
                 </Link>
               </Tooltip>
             </small>

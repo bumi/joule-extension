@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Icon, Button, Tabs, Alert } from 'antd';
+import { Button, Tabs, Alert } from 'antd';
+import { FileTextOutlined, FileProtectOutlined } from '@ant-design/icons';
 import { AppState } from 'store/reducers';
 import PromptTemplate from 'components/PromptTemplate';
 import NodeInfo from 'components/PromptTemplate/NodeInfo';
@@ -80,7 +81,7 @@ class VerifyPrompt extends React.Component<Props, State> {
                   key="message"
                   tab={
                     <>
-                      <Icon type="file-text" /> Message
+                      <FileTextOutlined /> Message
                     </>
                   }
                 >
@@ -90,7 +91,7 @@ class VerifyPrompt extends React.Component<Props, State> {
                   key="signature"
                   tab={
                     <>
-                      <Icon type="file-protect" /> Signature
+                      <FileProtectOutlined /> Signature
                     </>
                   }
                 >

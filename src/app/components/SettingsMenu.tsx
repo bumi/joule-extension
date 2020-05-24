@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Menu, Dropdown, Icon } from 'antd';
+import { Button, Menu, Dropdown } from 'antd';
+import {
+  ForkOutlined,
+  TeamOutlined,
+  PieChartOutlined,
+  SettingOutlined,
+  FullscreenOutlined,
+  LockOutlined,
+} from '@ant-design/icons';
+import Icon from '@ant-design/icons';
 import { browser } from 'webextension-polyfill-ts';
 import PeersModal from 'components/PeersModal';
 import OpenChannelModal from 'components/OpenChannelModal';
@@ -25,33 +34,33 @@ export default class SettingsMenu extends React.Component<{}, State> {
       <Menu>
         <Menu.Item key="channel" onClick={this.openChannelModal}>
           <a>
-            <Icon type="fork" /> Open channel
+            <ForkOutlined /> Open channel
           </a>
         </Menu.Item>
         <Menu.Item key="peers" onClick={this.openPeersModal}>
           <a>
-            <Icon type="team" /> Manage peers
+            <TeamOutlined /> Manage peers
           </a>
         </Menu.Item>
         <Menu.Item key="balances">
           <Link to="/balances">
-            <Icon type="pie-chart" /> Balances
+            <PieChartOutlined /> Balances
           </Link>
         </Menu.Item>
         <Menu.Divider />
         <Menu.Item key="settings">
           <Link to="/settings">
-            <Icon type="setting" /> Settings
+            <SettingOutlined /> Settings
           </Link>
         </Menu.Item>
         <Menu.Item key="full" onClick={this.openFullPage}>
           <a>
-            <Icon type="fullscreen" /> Full page
+            <FullscreenOutlined /> Full page
           </a>
         </Menu.Item>
         <Menu.Item key="clear" onClick={this.clearAuth}>
           <a>
-            <Icon type="lock" /> Lock account
+            <LockOutlined /> Lock account
           </a>
         </Menu.Item>
       </Menu>

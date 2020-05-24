@@ -1,7 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import { connect } from 'react-redux';
-import { Form, Input, Select, Button, Icon, Alert } from 'antd';
+import { Form, Input, Select, Button, Alert } from 'antd';
+import { QrcodeOutlined } from '@ant-design/icons';
 import Identicon from 'components/Identicon';
 import Unit from 'components/Unit';
 import Loader from 'components/Loader';
@@ -150,7 +151,7 @@ class LightningSend extends React.Component<Props, State> {
           />
           {!paymentRequestValue && (
             <Button size="small" className="LightningSend-pr-qr">
-              <Icon type="qrcode" />
+              <QrcodeOutlined />
             </Button>
           )}
         </Form.Item>

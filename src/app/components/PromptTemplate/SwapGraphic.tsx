@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'antd';
+import { SwapOutlined } from '@ant-design/icons';
 import Logo from 'static/images/logo.png';
 import { OriginData } from 'utils/prompt';
 
@@ -19,7 +19,7 @@ export default class SwapGraphic extends React.Component<Props> {
             <img src={this.props.origin.icon || ''} />
           </div>
           <div className="SwapGraphic-divider">
-            <Icon type="swap" />
+            <SwapOutlined />
           </div>
           <div className="SwapGraphic-icon">
             <img src={Logo} />

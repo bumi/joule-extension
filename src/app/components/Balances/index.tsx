@@ -1,6 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Tooltip, Progress, Tabs, Icon, Select, Alert } from 'antd';
+import { Tooltip, Progress, Tabs, Select, Alert } from 'antd';
+import {
+  ClockCircleOutlined,
+  ThunderboltOutlined,
+  LinkOutlined,
+} from '@ant-design/icons';
 import Statistic from 'antd/lib/statistic';
 import Loader from 'components/Loader';
 import { AppState } from 'store/reducers';
@@ -160,7 +165,7 @@ class Balances extends React.Component<Props, State> {
               <Tabs.TabPane
                 tab={
                   <>
-                    <Icon type="clock-circle" /> Pending
+                    <ClockCircleOutlined /> Pending
                   </>
                 }
                 key="pending"
@@ -175,7 +180,7 @@ class Balances extends React.Component<Props, State> {
               <Tabs.TabPane
                 tab={
                   <>
-                    <Icon type="thunderbolt" /> Lightning
+                    <ThunderboltOutlined /> Lightning
                   </>
                 }
                 key="lightning"
@@ -190,7 +195,7 @@ class Balances extends React.Component<Props, State> {
               <Tabs.TabPane
                 tab={
                   <>
-                    <Icon type="link" /> {blockchainDisplayName[chain]}
+                    <LinkOutlined /> {blockchainDisplayName[chain]}
                   </>
                 }
                 key="on-chain"

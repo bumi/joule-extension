@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Icon, Modal } from 'antd';
+import { Modal } from 'antd';
+import { WarningOutlined } from '@ant-design/icons';
 import semver from 'semver';
 import { getNodeInfo } from 'modules/node/actions';
 import { selectNodeInfo } from 'modules/node/selectors';
@@ -109,7 +110,7 @@ class NodeWarning extends React.Component<Props, State> {
 
     return (
       <div className={`NodeWarning is-${severity}`}>
-        <Icon type="warning" /> {message}
+        <WarningOutlined /> {message}
         {moreMessage && (
           <>
             . <a onClick={this.openMoreModal}>See more</a>.

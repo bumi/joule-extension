@@ -1,5 +1,6 @@
 import React from 'react';
-import { Upload, Icon, Alert, Button, Form, Input } from 'antd';
+import { Upload, Alert, Button, Form, Input } from 'antd';
+import { Icon } from '@ant-design/compatible';
 import { blobToHex } from 'utils/file';
 import { DEFAULT_LND_DIRS, NODE_TYPE } from 'utils/constants';
 import './UploadMacaroons.less';

@@ -1,7 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Button, Icon, Tooltip } from 'antd';
+import { Button, Tooltip } from 'antd';
+import {
+  ThunderboltFilled,
+  ClockCircleOutlined,
+  QrcodeOutlined,
+  FileTextOutlined,
+} from '@ant-design/icons';
 import { ButtonProps } from 'antd/lib/button';
 import BN from 'bn.js';
 import Identicon from 'components/Identicon';
@@ -54,18 +60,18 @@ class AccountInfo extends React.Component<Props, State> {
     const actions: ButtonProps[] = [
       {
         children: 'Deposit',
-        icon: 'qrcode',
+        icon: QrcodeOutlined,
         onClick: this.openDepositModal,
       },
       {
         children: 'Invoice',
-        icon: 'file-text',
+        icon: FileTextOutlined,
         onClick: this.props.onInvoiceClick,
       },
       {
         children: (
           <>
-            <Icon type="thunderbolt" theme="filled" /> Send
+            <ThunderboltFilled /> Send
           </>
         ),
         type: 'primary' as any,
@@ -105,10 +111,7 @@ class AccountInfo extends React.Component<Props, State> {
                     }
                   >
                     <Link to="/balances">
-                      <Icon
-                        className="AccountInfo-top-info-balance-pending"
-                        type="clock-circle"
-                      />
+                      <ClockCircleOutlined className="AccountInfo-top-info-balance-pending" />
                     </Link>
                   </Tooltip>
                 )}

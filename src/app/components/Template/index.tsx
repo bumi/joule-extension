@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
-import { Icon } from 'antd';
+import { LeftOutlined } from '@ant-design/icons';
 import SettingsMenu from 'components/SettingsMenu';
 import Logo from 'static/images/logo.png';
 import './style.less';
@@ -23,7 +23,7 @@ export default class Template extends React.Component<Props> {
           <div className={classnames('Template-header', hideHeader && 'is-hidden')}>
             {showBack ? (
               <Link className="Template-header-back" to="/">
-                <Icon type="left" />
+                <LeftOutlined />
               </Link>
             ) : (
               <div className="Template-header-icon">

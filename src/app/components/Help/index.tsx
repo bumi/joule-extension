@@ -1,5 +1,6 @@
 import React from 'react';
-import { Popover, Icon } from 'antd';
+import { Popover } from 'antd';
+import { QuestionCircleFilled } from '@ant-design/icons';
 import './index.less';
 
 interface Props {
@@ -10,7 +11,7 @@ interface Props {
 const Help: React.SFC<Props> = ({ children, title }) => (
   <Popover content={children} title={title} arrowPointAtCenter>
     <div className="Help">
-      <Icon type="question-circle" theme="filled" />
+      <QuestionCircleFilled />
     </div>
   </Popover>
 );

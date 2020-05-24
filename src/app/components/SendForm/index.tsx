@@ -1,5 +1,6 @@
 import React from 'react';
-import { Radio, Icon } from 'antd';
+import { Radio } from 'antd';
+import { ThunderboltOutlined, LinkOutlined } from '@ant-design/icons';
 import { RadioChangeEvent } from 'antd/lib/radio';
 import LightningSend from './LightningSend';
 import ChainSend from './ChainSend';
@@ -44,10 +45,10 @@ class SendForm extends React.Component<Props, State> {
         <div className="SendForm-type">
           <Radio.Group value={type} onChange={this.handleTypeChange}>
             <Radio.Button value="lightning">
-              <Icon type="thunderbolt" /> Lightning
+              <ThunderboltOutlined /> Lightning
             </Radio.Button>
             <Radio.Button>
-              <Icon type="link" /> {blockchainDisplayName[chain]}
+              <LinkOutlined /> {blockchainDisplayName[chain]}
             </Radio.Button>
           </Radio.Group>
         </div>

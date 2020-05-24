@@ -1,7 +1,8 @@
 // Huge bastardization of ant design's Transfer component
 import React from 'react';
 import { connect } from 'react-redux';
-import { Form, Input, Button, Icon, Drawer, message } from 'antd';
+import { Form, Input, Button, Drawer, message } from 'antd';
+import { EditOutlined } from '@ant-design/icons';
 import { updateNodeUrl, updateMacaroons } from 'modules/node/actions';
 import { changePassword } from 'modules/crypto/actions';
 import CreatePassword from 'components/CreatePassword';
@@ -79,7 +80,7 @@ class NodeSettings extends React.Component<Props, State> {
           <Input.Group compact className="Settings-input-group">
             <Input value={url as string} disabled />
             <Button onClick={this.editNodeUrl}>
-              <Icon type="edit" />
+              <EditOutlined />
             </Button>
           </Input.Group>
         </Form.Item>
@@ -87,7 +88,7 @@ class NodeSettings extends React.Component<Props, State> {
           <Input.Group compact className="Settings-input-group">
             <Input value={(adminMacaroon as string) || '<encrypted>'} disabled />
             <Button onClick={this.editMacaroons}>
-              <Icon type="edit" />
+              <EditOutlined />
             </Button>
           </Input.Group>
         </Form.Item>
@@ -95,7 +96,7 @@ class NodeSettings extends React.Component<Props, State> {
           <Input.Group compact className="Settings-input-group">
             <Input value={readonlyMacaroon as string} disabled />
             <Button onClick={this.editMacaroons}>
-              <Icon type="edit" />
+              <EditOutlined />
             </Button>
           </Input.Group>
         </Form.Item>

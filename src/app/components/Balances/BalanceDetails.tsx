@@ -1,5 +1,7 @@
 import React from 'react';
-import { Icon, Tooltip } from 'antd';
+import { Tooltip } from 'antd';
+import { StopOutlined } from '@ant-design/icons';
+import Icon from '@ant-design/icons';
 import Identicon from 'components/Identicon';
 import BigMessage from 'components/BigMessage';
 import { BalanceDetailGroup } from 'utils/balances';
@@ -63,7 +65,7 @@ const BalanceDetails: React.SFC<{
               {isRemovable && (
                 <div className="BalanceDetails-row-close">
                   <Tooltip title="Close Channel" placement="topRight" arrowPointAtCenter>
-                    <Icon type="stop" />
+                    <StopOutlined />
                   </Tooltip>
                 </div>
               )}

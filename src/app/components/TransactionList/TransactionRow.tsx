@@ -2,7 +2,9 @@ import React from 'react';
 import BN from 'bn.js';
 import moment from 'moment';
 import classnames from 'classnames';
-import { Tooltip, Icon } from 'antd';
+import { Tooltip } from 'antd';
+import { AuditOutlined } from '@ant-design/icons';
+import Icon from '@ant-design/icons';
 import Identicon from 'components/Identicon';
 import Unit from 'components/Unit';
 import { AnyTransaction } from 'modules/account/types';
@@ -49,7 +51,7 @@ class TransactionRow extends React.Component<Props> {
     } else if (isInvoice(source)) {
       icon = (
         <div className="TransactionRow-avatar-img is-icon is-invoice">
-          <Icon type="audit" />
+          <AuditOutlined />
         </div>
       );
     } else if (isChainTx(source)) {

@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, Collapse, Icon } from 'antd';
+import { Button, Collapse } from 'antd';
 import { NODE_TYPE } from 'utils/constants';
+import { Icon } from '@ant-design/compatible';
+import { LaptopOutlined, GlobalOutlined } from '@ant-design/icons';
 import LightningAppIcon from 'static/images/lightningapp.svg';
 import ZapAppIcon from 'static/images/zap.svg';
 import BTCPayServerIcon from 'static/images/btcpayserver.svg';
@@ -18,7 +20,7 @@ export default class SelectType extends React.Component<Props> {
       <div className="SelectType">
         <Button
           size="large"
-          icon="laptop"
+          icon={<LaptopOutlined />}
           block
           onClick={() => onSelectNodeType(NODE_TYPE.LOCAL)}
         >
@@ -26,7 +28,7 @@ export default class SelectType extends React.Component<Props> {
         </Button>
         <Button
           size="large"
-          icon="global"
+          icon={<GlobalOutlined />}
           block
           onClick={() => onSelectNodeType(NODE_TYPE.REMOTE)}
         >

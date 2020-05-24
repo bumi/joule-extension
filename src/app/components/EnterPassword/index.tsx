@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router';
-import { Icon, Input, Form, Modal } from 'antd';
+import { Input, Form, Modal } from 'antd';
+import { UnlockOutlined } from '@ant-design/icons';
 import { cryptoActions } from 'modules/crypto';
 import { syncActions } from 'modules/sync';
 import { AppState } from 'store/reducers';
@@ -55,7 +56,7 @@ class PasswordPage extends React.Component<Props, State> {
               placeholder="Enter your password"
               value={password}
               onChange={this.handleChange}
-              enterButton={<Icon type="unlock" />}
+              enterButton={<UnlockOutlined />}
               ref={el => (this.input = el)}
             />
           </Form.Item>

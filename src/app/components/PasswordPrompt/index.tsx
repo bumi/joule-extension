@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Icon, Input, Checkbox, Form, Modal } from 'antd';
+import { Input, Checkbox, Form, Modal } from 'antd';
+import { UnlockOutlined } from '@ant-design/icons';
 import { CheckboxChangeEvent } from 'antd/lib/checkbox';
 import { cryptoActions } from 'modules/crypto';
 import { AppState } from 'store/reducers';
@@ -55,7 +56,7 @@ class PasswordPrompt extends React.Component<Props, State> {
                 placeholder="Enter your password"
                 value={password}
                 onChange={this.handleChangePassword}
-                enterButton={<Icon type="unlock" />}
+                enterButton={<UnlockOutlined />}
                 onSearch={() => this.handleSubmit()}
                 autoFocus
               />

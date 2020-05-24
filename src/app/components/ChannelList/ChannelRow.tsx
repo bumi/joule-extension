@@ -1,6 +1,7 @@
 import React from 'react';
 import BN from 'bn.js';
-import { Tooltip, Icon } from 'antd';
+import { Tooltip } from 'antd';
+import { EyeInvisibleFilled } from '@ant-design/icons';
 import classnames from 'classnames';
 import Identicon from 'components/Identicon';
 import Unit from 'components/Unit';
@@ -52,7 +53,7 @@ export default class ChannelRow extends React.Component<Props> {
           {isPrivate && (
             <Tooltip title="Private">
               <div className="ChannelRow-avatar-private">
-                <Icon type="eye-invisible" theme="filled" />
+                <EyeInvisibleFilled />
               </div>
             </Tooltip>
           )}

@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
-import { Icon, Button } from 'antd';
+import { Button } from 'antd';
+import { Icon } from '@ant-design/compatible';
 import { ButtonProps } from 'antd/lib/button';
 import './style.less';
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import { connect } from 'react-redux';
-import { Icon, Button, Modal, Input } from 'antd';
+import { Button, Modal, Input } from 'antd';
+import { SwapOutlined, CopyOutlined } from '@ant-design/icons';
 import Identicon from 'components/Identicon';
 import Unit from 'components/Unit';
 import DetailsTable, { DetailsRow } from 'components/DetailsTable';
@@ -63,7 +64,7 @@ class ChannelInfo extends React.Component<Props> {
             icon: <Identicon pubkey={account.pubKey} />,
             name: account.alias || account.pubKey,
           }}
-          icon={<Icon type="swap" />}
+          icon={<SwapOutlined />}
           to={{
             icon: <Identicon pubkey={channel.node.pub_key} />,
             name: channel.node.alias || channel.node.pub_key,
@@ -76,7 +77,14 @@ class ChannelInfo extends React.Component<Props> {
         {/* TODO: show button instead of instructions when LND issue #2730 is resolved */}
         {channel.status === CHANNEL_STATUS.OPEN && (
           <div className="ChannelInfo-actions" style={{ display: 'none' }}>
-            <Button type="danger" size="large" block ghost onClick={this.closeChannel}>
+            <Button
+              type="primary"
+              size="large"
+              danger
+              block
+              ghost
+              onClick={this.closeChannel}
+            >
               Close Channel
             </Button>
           </div>
@@ -93,7 +101,7 @@ class ChannelInfo extends React.Component<Props> {
               addonAfter={
                 <Copy text={closeCommand}>
                   <span>
-                    <Icon type="copy" /> Copy
+                    <CopyOutlined /> Copy
                   </span>
                 </Copy>
               }

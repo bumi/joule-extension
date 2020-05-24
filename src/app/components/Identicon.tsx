@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { toSvg } from 'jdenticon';
-import { Icon } from 'antd';
+import { QuestionOutlined } from '@ant-design/icons';
 import './Identicon.less';
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
@@ -24,7 +24,7 @@ const Identicon: React.SFC<Props> = ({ pubkey, size, ...rest }) => {
   } else {
     return (
       <div className={classnames('Identicon', rest.className)}>
-        <Icon type="question" />
+        <QuestionOutlined />
       </div>
     );
   }

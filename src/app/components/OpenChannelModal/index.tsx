@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Modal, Form, Input, Button, Checkbox, Icon, Alert, Result, message } from 'antd';
+import { Modal, Form, Input, Button, Checkbox, Alert, Result, message } from 'antd';
+import { LinkOutlined } from '@ant-design/icons';
 import { CheckboxChangeEvent } from 'antd/lib/checkbox';
 import AmountField from 'components/AmountField';
 import FeeSelectField from 'components/FeeSelectField';
@@ -116,7 +117,7 @@ class OpenChannelModal extends React.Component<Props, State> {
               target="_blank"
               rel="noopener nofollow"
             >
-              <Icon type="link" /> View transaction
+              <LinkOutlined /> View transaction
             </Button>,
           ]}
         />

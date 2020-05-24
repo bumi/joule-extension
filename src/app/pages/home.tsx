@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Tabs, Icon, Drawer } from 'antd';
+import { Tabs, Drawer } from 'antd';
+import { ForkOutlined, ShoppingOutlined } from '@ant-design/icons';
 import AccountInfo from 'components/AccountInfo';
 import ChannelList from 'components/ChannelList';
 import TransactionList from 'components/TransactionList';
@@ -56,7 +57,7 @@ class HomePage extends React.Component<Props, State> {
           <Tabs.TabPane
             tab={
               <>
-                <Icon type="fork" /> Channels
+                <ForkOutlined /> Channels
               </>
             }
             key="channels"
@@ -66,7 +67,7 @@ class HomePage extends React.Component<Props, State> {
           <Tabs.TabPane
             tab={
               <>
-                <Icon type="shopping" /> Transactions
+                <ShoppingOutlined /> Transactions
               </>
             }
             key="transactions"
