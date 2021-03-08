@@ -60,7 +60,7 @@
     "copy-webpack-plugin": "^6.3.2",
     "core-js": "3.6.5",
     "crypto-js": "4.0.0",
-    "css-loader": "^1.0.0",
+    "css-loader": "^5.1.1",
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "4.5.0",
     "husky": "4.3.0",
